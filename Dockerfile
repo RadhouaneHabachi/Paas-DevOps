@@ -2,6 +2,7 @@
 FROM node:latest as node
 WORKDIR /app
 COPY . .
+RUN touch test file
 RUN npm install -g npm-check-updates
 RUN ncu -u
 RUN npm install --legacy-peer-deps --force
